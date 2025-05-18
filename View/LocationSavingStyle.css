@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f0fa;
+}
+.dashboard {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.dashboard h2 {
+    font-size: 18px;
+    color: #1e90ff;
+    margin-top: 0;
+}
+.widget {
+    background-color: #f0f7ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.widget:hover {
+    background-color: #e0f7fa;
+}
+.shortcuts {
+    margin-top: 20px;
+}
+.shortcuts a {
+    display: block;
+    padding: 8px;
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.shortcuts a:hover {
+    background-color: #e0f7fa;
+    border-radius: 4px;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-left: 240px; /* Shift content to accommodate dashboard */
+    padding: 20px;
+}
+.location-header {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+.search-bar button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #e0f7fa;
+}
+.results-list {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.results-list div {
+    padding: 10px;
+    cursor: pointer;
+}
+.results-list div:hover {
+    background-color: #e0f7fa;
+}
+.saved-places, .quick-switch {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.saved-places h2, .quick-switch h2 {
+    margin-top: 0;
+    color: #333;
+}
+.saved-places button {
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.saved-places button:hover {
+    background-color: #e0f7fa;
+}
+.saved-places ul {
+    list-style: none;
+    padding: 0;
+}
+.saved-places li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.saved-places li:last-child {
+    border-bottom: none;
+}
+.saved-places li span {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+.saved-places li button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.saved-places li button:hover {
+    background-color: #e0f7fa;
+}
+.quick-switch select {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+}
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+.modal-content .search-bar {
+    margin-bottom: 10px;
+}
+.modal-content button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modal-content button:hover {
+    background-color: #e0f7fa;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}

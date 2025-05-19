@@ -21,6 +21,7 @@
         <div class="shortcuts">
             <a href="CurrentCondition.php">Current Conditions</a>
             <a href="5DaysForecast.php">5-Day Forecast</a>
+            <a href="sunrise_sunset.php">Sunrise/Sunset</a>
             <a href="weather_alerts.php">Weather Alerts</a>
             <a href="#">Historical Data</a>
             <a href="#">Contact Us</a>
@@ -279,7 +280,8 @@
 </html>
 <?php
     }else{
-        header('location: login.html');
+
+        header('location: ../View/error.php');
     }
 
 ?>

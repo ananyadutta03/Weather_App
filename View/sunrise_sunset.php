@@ -58,10 +58,8 @@
     </div>
 
     <script>
-        // Faculty-style JavaScript: using let, getElementById, and simple DOM manipulation
         let currentCity = "";
 
-        // Simulated location and alert data
         let locations = [
             {
                 name: "Dhaka",
@@ -175,34 +173,28 @@
             }
         ];
 
-        // Initialize default city (Dhaka)
         function initDefaultLocation() {
             selectLocation("Dhaka");
         }
 
-        // Handle city search
         function searchLocation() {
             let searchInput = document.getElementById("location-search").value.toLowerCase();
             let resultsList = document.getElementById("results-list");
             let errorMessage = document.getElementById("search-error");
 
-            // Clear previous results and errors
             errorMessage.innerHTML = "";
             resultsList.innerHTML = "";
 
-            // Check if search input is empty
             if (searchInput === "") {
                 errorMessage.innerHTML = "Please type a city!";
                 errorMessage.style.color = "red";
                 return;
             }
 
-            // Find matching cities
             let matchingCities = locations.map(loc => loc.name).filter(city => 
                 city.toLowerCase().includes(searchInput)
             );
 
-            // Show results or error
             if (matchingCities.length === 0) {
                 resultsList.innerHTML = "<div>No cities found!</div>";
             } else {
@@ -217,7 +209,6 @@
             }
         }
 
-        // Update page with selected city's data
         function selectLocation(cityName) {
             currentCity = cityName;
             document.getElementById("location").innerHTML = "Current Location: " + currentCity;
@@ -228,7 +219,6 @@
             updateDashboard();
         }
 
-        // Update sunrise, sunset, and moon phase data
         function updateSunMoonData() {
             let data = locations.find(loc => loc.name.toLowerCase() === currentCity.toLowerCase());
             if (!data) {
@@ -237,19 +227,16 @@
                 return;
             }
 
-            // Day/Night Tracker
             document.getElementById("sunrise").innerHTML = data.sunrise;
             document.getElementById("sunset").innerHTML = data.sunset;
             document.getElementById("daylight-remaining").innerHTML = calculateDaylightRemaining(data.sunset);
             document.getElementById("day-night-status").innerHTML = getDayNightStatus(data.sunrise, data.sunset);
 
-            // Moon Phase
             document.getElementById("moonrise").innerHTML = data.moonrise;
             document.getElementById("moonset").innerHTML = data.moonset;
             document.getElementById("moon-phase-name").innerHTML = data.moonPhase;
         }
 
-        // Calculate remaining daylight (simulated current time: 14:00, May 5, 2025)
         function calculateDaylightRemaining(sunset) {
             let currentTime = "14:00"; // Simulated for testing
             let [sunsetHour, sunsetMinute] = sunset.split(":").map(Number);
@@ -268,7 +255,6 @@
             return `${hours} hours ${minutes} minutes`;
         }
 
-        // Determine day or night status
         function getDayNightStatus(sunrise, sunset) {
             let currentTime = "14:00"; // Simulated for testing
             let [sunriseHour, sunriseMinute] = sunrise.split(":").map(Number);
@@ -286,7 +272,7 @@
             }
         }
 
-        // Update dashboard widgets
+        // dashboard widgets
         function updateDashboard() {
             let data = locations.find(loc => loc.name.toLowerCase() === currentCity.toLowerCase());
             if (data) {
@@ -296,27 +282,22 @@
             }
         }
 
-        // Navigate to current conditions
         function navigateToCurrent() {
             window.location.href = "current_conditions.html";
         }
 
-        // Navigate to 5-day forecast
         function navigateToForecast() {
             window.location.href = "five_day_forecast.html";
         }
 
-        // Navigate to weather alerts
         function navigateToAlerts() {
             window.location.href = "weather_alerts.html";
         }
 
-        // Show alerts (placeholder for backward compatibility)
         function showAlerts() {
             alert("No weather alerts at this time.");
         }
 
-        // Start app
         window.onload = function() {
             initDefaultLocation();
         };

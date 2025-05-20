@@ -57,7 +57,9 @@
     <script>
         let currentLocation = "";
 
-        // Simulated location and weather data
+        // location and weather data er array
+        // eta hocche mock data, real data nite hole API use korte hobe
+
         let locations = [
             {
                 name: "Dhaka",
@@ -171,7 +173,7 @@
             }
         ];
 
-        // Dhaka is the default location...
+        // default location ...
         function initDefaultLocation() {
             selectLocation("Dhaka");
         }
@@ -244,7 +246,7 @@
             document.getElementById("air-quality").innerHTML = data.airQuality;
         }
 
-        // dashboard e widgets update korbo
+        // dashboard er widget gulo update korbo
         function updateDashboard() {
             let data = locations.find(loc => loc.name.toLowerCase() === currentLocation.toLowerCase());
             if (data) {
@@ -262,7 +264,7 @@
             window.location.href = "five_day_forecast.html";
         }
 
-        // weather alerts er jionno focus korbo
+        // weather alerts er jonno focus korbo
         function navigateToAlerts() {
             window.location.href = "weather_alerts.html";
         }

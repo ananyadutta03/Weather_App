@@ -70,11 +70,10 @@
     </div>
 
     <script>
-        // Simple variables to track current city and selected day
         let currentCity = "";
         let selectedDay = 0;
 
-        // Simulated location and alert data
+        // location and alert data in array format
         let locations = [
             {
                 name: "Dhaka",
@@ -153,7 +152,7 @@
             }
         ];
 
-        // Simulated 5-day forecast data for each city
+        // 5-day forecast er sample data for every city
         let forecastData = {
             "Dhaka": [
                 { day: "Mon", high: 32, low: 26, condition: "Sunny", hourly: [
@@ -267,12 +266,12 @@
             ]
         };
 
-        // Set default city to Dhaka when page loads
+        // defalt e dhaka 
         function initDefaultLocation() {
             selectLocation("Dhaka");
         }
 
-        // Handle city search
+        // city search er javaScript function
         function searchLocation() {
             let searchInput = document.getElementById("location-search").value.toLowerCase();
             let resultsList = document.getElementById("results-list");
@@ -305,7 +304,7 @@
             }
         }
 
-        // Update the page with the selected city's forecast
+        // will show after select city......
         function selectLocation(cityName) {
             currentCity = cityName;
             document.getElementById("location").innerHTML = "Current Location: " + currentCity;
@@ -319,7 +318,7 @@
             updateDashboard();
         }
 
-        // Display the 5-day forecast carousel
+        // Display 
         function showForecast() {
             let carousel = document.getElementById("carousel-container");
             let days = forecastData[currentCity] || [];
@@ -348,8 +347,9 @@
             }
         }
 
-        // Scroll carousel left or right
+        
         function scrollCarousel(direction) {
+                //<div class="carousel-container" id="carousel-container"></div>
             let carousel = document.getElementById("carousel-container");
             let scrollAmount = 160;
             carousel.scrollLeft += direction * scrollAmount;
@@ -380,12 +380,12 @@
             document.getElementById("hourly-breakdown").style.display = "block";
         }
 
-        // Update dashboard widgets
+        // Update dashboard 
         function updateDashboard() {
             let data = forecastData[currentCity];
             let alertData = locations.find(loc => loc.name.toLowerCase() === currentCity.toLowerCase());
             if (data && alertData) {
-                document.getElementById("widget-temp").innerHTML = `Current Temp: ${data[0].high} °C`; // Approx. current
+                document.getElementById("widget-temp").innerHTML = `Current Temp: ${data[0].high} °C`;
                 document.getElementById("widget-forecast").innerHTML = `Tomorrow’s High: ${data[1].high} °C`;
                 document.getElementById("widget-alerts").innerHTML = `Alerts: ${alertData.alerts.length} Active`;
             }

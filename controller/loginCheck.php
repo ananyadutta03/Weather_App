@@ -8,8 +8,7 @@
             echo "null username/password!";
         }else if($username == $password){
             $_SESSION['status'] = true;
-            setcookie('status', 'true', time()+3000, '/');
-            header("Location: ../View/CurrentCondition.php");
+            header("Location: ../View/User/login.php");
             //echo "valid user!";
         }else{
             echo "invalid user!";

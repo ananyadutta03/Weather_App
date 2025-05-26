@@ -65,7 +65,7 @@
 </head>
 <body>
     <h2 align="center">Login</h2>
-    <form action="check.php"  onsubmit="return validate()">
+    <form action="../unitConversion.php"  onsubmit="return validate()">
         <table align="center">
             <tr>
                 <td><label for="email">Email:</label></td>
@@ -83,13 +83,13 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <a href="/ActivityFeed.html"><button>Login</button></a>
+                    <a href="../unitConversion.php"><button>Login</button></a>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <a href="reset authen.html">Forgot Password?</a><br>
-                    <a href="email verifi authen.html">Verify Email</a><br>
+                    <a href="reset.php">Forgot Password?</a><br>
+                    <a href="email.php">Verify Email</a><br>
                     
                     
                     

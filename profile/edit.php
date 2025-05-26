@@ -2,6 +2,82 @@
 <html lang="en">
 <head>
     <title>Edit Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 40px;
+        }
+
+        .edit-title {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-avatar {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .error {
+            color: red;
+        }
+
+        #succMsg {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+    
 </head>
 <body>
     <h3 class="edit-title">Edit Your Profile</h3>
@@ -35,12 +111,9 @@
             <tr>
                 <td><input type="submit" value="Save Changes" /></td>
             </tr>
-           
         </table>
         <p id="succMsg"></p>
-       
     </form>
-      <a href="change.php" class="profile-link">change</a><br>
 
     <script>
         function validate() {

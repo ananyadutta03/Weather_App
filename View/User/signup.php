@@ -107,10 +107,13 @@
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="SignUp">
+                    <a href="login.php" class="profile-link">clogin</a><br>
                 </td>
             </tr>
         </table>
+        
     </form>
+    
 
     <script>
         function validate()

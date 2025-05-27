@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="weather_alertsStyle.css">
 </head>
 <body>
-    <!-- Dashboard Part of HTML -->
     <div class="dashboard">
         <h2>Weather Dashboard</h2>
         <div class="widget" id="widget-temp" onclick="focusWeatherFeed()">Current Temp: -- °C</div>
@@ -39,13 +38,13 @@
             <p id="search-error" class="error"></p>
         </div>
 
-        <!-- Alert Inbox -->
+        
         <div class="alert-inbox" id="alert-inbox">
             <h2>Alert Inbox <span class="notification-badge" id="alert-count">0</span></h2>
             <ul id="alert-list"></ul>
         </div>
 
-        <!-- Warning Details -->
+    
         <div class="warning-details" id="warning-details">
             <h2>Warning Details</h2>
             <p><span>Title:</span> <span id="detail-title">--</span></p>
@@ -55,7 +54,7 @@
             <p><span>Affected Areas:</span> <span id="detail-areas">--</span></p>
         </div>
 
-        <!-- Safety Tips -->
+        
         <div class="safety-tips" id="safety-tips">
             <h2>Safety Tips</h2>
             <p><span>For:</span> <span id="tips-title">--</span></p>
@@ -64,10 +63,10 @@
     </div>
 
     <script>
-        // Faculty-style JavaScript: using let, getElementById, and simple DOM manipulation
+        
         let currentLocation = "";
 
-        // Simulated location and alert data
+        
         let locations = [
             {
                 name: "Dhaka",
@@ -156,12 +155,12 @@
             }
         ];
 
-        // Initialize default location (Dhaka)
+        
         function initDefaultLocation() {
             selectLocation("Dhaka");
         }
 
-        // Search locations
+        
         function searchLocation() {
             let searchInput = document.getElementById("location-search").value.toLowerCase();
             let resultsList = document.getElementById("results-list");
@@ -194,7 +193,7 @@
             }
         }
 
-        // Select a location and display alerts
+        
         function selectLocation(locationName) {
             let locationDisplay = document.getElementById("location");
             let alertInbox = document.getElementById("alert-inbox");
@@ -212,7 +211,7 @@
             updateDashboard();
         }
 
-        // Fetch and display alert data
+        
         function fetchAlertData(location) {
             let data = locations.find(loc => loc.name.toLowerCase() === location.toLowerCase());
 
@@ -222,7 +221,6 @@
                 return;
             }
 
-            // Update Alert Inbox
             let alertList = document.getElementById("alert-list");
             let alertCount = document.getElementById("alert-count");
             alertList.innerHTML = "";
@@ -245,7 +243,7 @@
                 });
             }
 
-            // Display details and tips for the first alert (if any)
+            
             if (data.alerts.length > 0) {
                 displayAlertDetails(data.alerts[0]);
             } else {
@@ -260,7 +258,6 @@
             }
         }
 
-        // Display alert details and safety tips
         function displayAlertDetails(alert) {
             document.getElementById("detail-title").innerHTML = alert.title;
             document.getElementById("detail-severity").innerHTML = `<span class="severity-${alert.severity.toLowerCase()}">${alert.severity}</span>`;
@@ -282,7 +279,6 @@
             }
         }
 
-        // Update dashboard widgets
         function updateDashboard() {
             let data = locations.find(loc => loc.name.toLowerCase() === currentLocation.toLowerCase());
             if (data) {
@@ -292,22 +288,18 @@
             }
         }
 
-        // Focus on alert inbox when clicking alerts widget
         function focusAlertInbox() {
             document.getElementById("alert-inbox").scrollIntoView({ behavior: "smooth" });
         }
 
-        // Navigate to 5-day forecast
         function navigateToForecast() {
             window.location.href = "five_day_forecast.html";
         }
 
-        // Focus on weather feed (placeholder for consistency)
         function focusWeatherFeed() {
             document.getElementById("alert-inbox").scrollIntoView({ behavior: "smooth" });
         }
 
-        // Start app
         window.onload = function() {
             initDefaultLocation();
         };

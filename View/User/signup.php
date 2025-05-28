@@ -46,7 +46,7 @@
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: bold;
         }
@@ -107,7 +107,7 @@
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="SignUp">
-                    <a href="login.php" class="profile-link">clogin</a><br>
+                    <a href=" ../login.php" class="profile-link">login</a><br>
                 </td>
             </tr>
         </table>

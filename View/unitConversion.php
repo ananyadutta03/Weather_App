@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['status'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,9 +160,10 @@
             <img class="avater" src="usericon.svg" alt="User Avatar" />
             <ul class="options d-none">
                 <li><a href="profile/view.php">View Profile</a></li>
+                 <li><a href="radarMaps.php">radarMaps</a></li>
                 <li><a href="shareFeture.php">shareFeture</a></li>
+                <li><a href=" historicalData.php"> historicalData</a></li>
                 <li><a href="widgetSupport.php">widgetSupport</a></li>
-                <li><a href="#">Activity Log</a></li>
                 <li><a href="contactUsForm.php" class="bottomOption">Contact With Us</a></li>
             </ul>
         </div>
@@ -191,7 +196,7 @@
             <p><strong>Windspeed:</strong> <span id="windspeed-preview">15 mph</span></p>
             <p><strong>Pressure:</strong> <span id="pressure-preview">1013 mb</span></p>
         </div>
-        <button type="button" onclick="alert('Login functionality not implemented')">Login</button>
+       
     </section>
     <script>
         // Base values
@@ -268,3 +273,9 @@
     </script>
 </body>
 </html>
+
+<?php
+} else {
+  header('location: login.php');
+}
+?>

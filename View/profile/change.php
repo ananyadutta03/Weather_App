@@ -4,6 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Profile Picture</title>
+
+    <style>
+        body.avatar-body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .avatar-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+        }
+
+        .avatar-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+
+        .avatar-preview:hover {
+            transform: scale(1.05);
+        }
+
+        .avatar-form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .avatar-form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .avatar-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .avatar-submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .avatar-submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .avatar-link {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .avatar-link:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
     
 </head>
 
@@ -26,7 +114,7 @@
 
         </form>
 
-        <a href="edit.php" class="avatar-link">Return to Profile Settings</a>
+        <a href="update.php" class="avatar-link">update</a>
     </div>
 
     <script>

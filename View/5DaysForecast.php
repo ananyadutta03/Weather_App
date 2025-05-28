@@ -391,27 +391,22 @@
             }
         }
 
-        // Navigate to current conditions
         function navigateToCurrent() {
             window.location.href = "current_conditions.html";
         }
 
-        // Focus on forecast carousel
         function focusForecastCarousel() {
             document.getElementById("forecast-carousel").scrollIntoView({ behavior: "smooth" });
         }
 
-        // Navigate to weather alerts
         function navigateToAlerts() {
             window.location.href = "weather_alerts.html";
         }
 
-        // Show alerts (placeholder for backward compatibility)
         function showAlerts() {
             alert("No weather alerts at this time.");
         }
 
-        // Start app
         window.onload = function() {
             initDefaultLocation();
         };

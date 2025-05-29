@@ -8,7 +8,7 @@
 <body style="text-align: center;">
     <h1 >404 Page Not Found</h1>
     <h2>Can be session expired</h2>
-    <p>Click the <a href="login.php">Link</a> to go back to the login page</p>
+    <p>Click the <a href="loginA.php">Link</a> to go back to the login page</p>
     
 </body>
 </html>

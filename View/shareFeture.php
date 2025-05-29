@@ -140,7 +140,6 @@
         @media (max-width: 600px) {
             section {
                 padding: 15px;
-                margin0840
                 margin: 10px;
             }
 

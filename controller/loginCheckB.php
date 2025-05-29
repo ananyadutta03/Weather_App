@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         exit();
     }
 } else {
-   header("Location: ../View/login.php");
+   header("Location: ../View/loginB.php");
     exit();
 }
 ?>

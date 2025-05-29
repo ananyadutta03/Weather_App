@@ -49,9 +49,8 @@
   </style>
 </head>
 <body>
-<<<<<<< HEAD
   <h2>Login</h2>
-  <form action="../controller/loginCheck.php" method="POST" onsubmit="return validate()">
+  <form action="../controller/loginCheckB.php" method="POST" onsubmit="return validate()">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>
     <p id="uError" class="error"></p>
@@ -86,39 +85,6 @@
       }
 
       return valid;
-=======
-    <div class="container">
-    <!-- Login Form -->
-        <div class="login-box">
-            <form method="post" action="../controller/loginCheck.php">
-               <h2>Login to Weather App</h2>
-                <input type="text" id="username" name="username" placeholder="Username"><br><br>
-                <input type="password" id="password" name="password" placeholder="Password"><br>
-                <p style="color: red;" id="login-error" class="error"></p><br>
-                <button type="submit" name="submit">Login</button>
-                
-            </form>
-        </div>
-    </div>
-    <script>
-   function validate() {
-    let username = document.getElementById('username').value.trim();
-    let password = document.getElementById('password').value.trim();
-    let errorMsg = document.getElementById('login-error');
-    
-    errorMsg.innerHTML = "";
-    
-    if (username == "" || password == "") {
-        errorMsg.innerHTML = "null username/password!";
-        errorMsg.style.color = 'red';
-        return false;
-    } else if (username == password) {
-        return true;
-    } else {
-        errorMsg.innerHTML = "invalid user!";
-        errorMsg.style.color = 'red';
-        return false;
->>>>>>> 98025e0d2ae7c0dd73df2ae5e1cca1ccf52a7788
     }
   </script>
 </body>
